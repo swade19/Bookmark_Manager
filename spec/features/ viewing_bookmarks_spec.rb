@@ -9,5 +9,7 @@ feature "Viewing Bookmarks" do
   scenario "allows you to view the bookmarks" do
     visit ("/bookmarks")
     expect(page).to have_content "https://www.google.com"
+    expect(page).to have_content "https://www.facebook.com"
+    expect(page).to have_content "https://www.twitter.com"
   end
 end
