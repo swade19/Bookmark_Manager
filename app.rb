@@ -1,17 +1,12 @@
 require "sinatra/base"
+require "./lib/bookmark"
 
 class BookmarkManager < Sinatra::Base
   get "/" do
-    "Bookmark Manager"
+    redirect "/bookmarks"
   end
-
   get "/bookmarks" do
-    @bookmarks = [
-      "https://www.google.com",
-      "https://www.facebook.com",
-      "https://www.twitter.com",
-    ]
-
+    @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
 
