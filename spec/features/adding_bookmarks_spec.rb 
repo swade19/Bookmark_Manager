@@ -1,8 +1,0 @@
-# require "bookmark"
-
-# scenario "allows user to add a bookmark" do
-#   visit ("/add-test")
-#   bookmark.insert("test", "http://www.twitter.com")
-#   bookmark = Bookmark.all("test")
-#   expect(bookmark[0]["url"]).to include ("http://www.twitter.com")
-# end
